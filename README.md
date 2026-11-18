@@ -1,3 +1,4 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lenconmutaiki-max/maize---doctor---by---lencon---mutaiki/blob/main/Maize_doctor_by_Lencon_Mutaiki.ipynb)
 # 🌽 Maize Doctor by Lencon Mutaiki
 
 **Helping Zimbabwe farmers diagnose maize diseases in English & Shona**
