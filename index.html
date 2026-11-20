@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maize Doctor - Zimbabwe</title>
+<style>
+body{font-family:Arial,sans-serif;background:#e8f5e9;margin:0;padding:15px;text-align:center}
+.box{background:white;border-radius:15px;padding:20px;max-width:500px;margin:auto;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+h1{color:#1b5e20;margin:5px}.sub{color:#555}
+button{width:100%;padding:14px;margin:8px 0;font-size:18px;border:none;border-radius:10px;background:#2e7d32;color:white}
+button:active{background:#1b5e20}
+.lang{padding:10px;background:#fff;border:2px solid #2e7d32;color:#2e7d32;border-radius:20px;width:auto;padding-left:20px;padding-right:20px}
+#result{background:#fff3e0;border-left:5px solid #ff9800;padding:15px;margin-top:15px;text-align:left;display:none;border-radius:10px}
+</style>
+</head>
+<body>
+<div class="box">
+<div>🌽</div>
+<h1>Maize Doctor</h1>
+<p class="sub">Empowering Farmers with Agri-AI Diagnostics<br>Zimbabwe</p>
+<button class="lang" onclick="toggleLang()">English / Shona</button>
+<p id="ask">What do you see on your maize?</p>
+<button onclick="show('spots')">🟤 1. Spots on Leaves</button>
+<button onclick="show('yellow')">💛 2. Yellow Leaves</button>
+<button onclick="show('holes')">🐛 3. Holes / Worms</button>
+<button onclick="show('wilt')">🥀 4. Wilting / Drying</button>
+<div id="result"></div>
+<p style="font-size:12px;color:#777">By Lencon Mutaiki | For Zimbabwe Farmers</p>
+</div>
+<script>
+let shona=false;
+function toggleLang(){
+shona=!shona;
+document.getElementById('ask').innerText=shona?'Unoonei pachibage chako?':'What do you see on your maize?';
+}
+function show(x){
+let r=document.getElementById('result');r.style.display='block';
+if(x=='spots') r.innerHTML='<b>🌽 Likely: Grey Leaf Spot / Maize Streak</b><br><br><b>Treatment:</b><br>• Remove affected leaves<br>• Spray Mancozeb or Copper fungicide<br>• Do not plant maize same field next season - rotate with beans<br><br><b>Prevention:</b> Use tolerant seed like SC 719';
+if(x=='yellow') r.innerHTML='<b>💛 Likely: Lack of Nitrogen / Maize Streak Virus</b><br><br><b>Treatment:</b><br>• Apply Urea / Ammonium Nitrate (AN) - 1 cup per plant<br>• If streaks: remove plant, control leafhoppers<br>• Water well after fertilizer';
+if(x=='holes') r.innerHTML='<b>🐛 Likely: Fall Armyworm</b><br><br><b>Treatment:</b><br>• Crush and put soil / ash in the funnel (centre) of plant<br>• Spray Lambda / Karate or Bt<br>• Check early morning - kill worms by hand<br><br><b>Urgent:</b> Spray within 2 days!';
+if(x=='wilt') r.innerHTML='<b>🥀 Likely: No Water / Root Rot</b><br><br><b>Treatment:</b><br>• Water - mulch with grass around plant<br>• If soil is wet but plant wilts: root rot - remove plant<br>• Improve drainage, do not over-water';
+window.scrollTo(0,document.body.scrollHeight);
+}
+</script>
+</body>
+</html>
